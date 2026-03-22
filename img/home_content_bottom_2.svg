@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 359 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,392,-605)">
+        <g transform="matrix(0.333333,0,0,0.333333,-399.771,-89.9135)">
+            <g transform="matrix(1.28941,0,0,1.0522,-292.338,1911.56)">
+                <path d="M1079.82,214.267C1079.82,187.673 1062.2,166.082 1040.5,166.082L285.837,166.082C264.136,166.082 246.517,187.673 246.517,214.267C246.517,240.861 264.136,262.451 285.837,262.451L1040.5,262.451C1062.2,262.451 1079.82,240.861 1079.82,214.267Z" style="fill:rgb(242,242,242);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-199.23,1939)">
+                <text x="296.216px" y="212.483px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:36px;fill:rgb(124,124,124);">🔍</text>
+                <g transform="matrix(36,0,0,36,774.476,212.483)">
+                </g>
+                <text x="342.476px" y="212.483px" style="font-family:'HiraginoSans-W3', 'Hiragino Sans', sans-serif;font-weight:300;font-size:36px;fill:rgb(124,124,124);">イベント、チケットを探す</text>
+            </g>
+            <g transform="matrix(0.767683,0,0,0.767683,300.199,1967.63)">
+                <path d="M963.636,253.238L960.959,253.238C951.785,253.238 944.336,245.789 944.336,236.615L944.336,233.938M1009.55,233.938L1009.55,236.615C1009.55,245.789 1002.1,253.238 992.93,253.238L990.253,253.238M990.253,188.022L992.93,188.022C1002.1,188.022 1009.55,195.47 1009.55,204.645L1009.55,207.321M944.336,207.321L944.336,204.645C944.336,195.47 951.785,188.022 960.959,188.022L963.636,188.022" style="fill:none;stroke:rgb(124,124,124);stroke-width:3.91px;"/>
+                <g transform="matrix(1,0,0,1,2.30653,3.17196)">
+                    <g transform="matrix(0.875776,0,0,0.875776,119.757,21.9812)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:none;stroke:rgb(124,124,124);stroke-width:2.97px;stroke-linejoin:miter;"/>
+                    </g>
+                    <g transform="matrix(0.561243,0,0,0.561243,422.981,88.0445)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:rgb(124,124,124);"/>
+                    </g>
+                </g>
+                <g transform="matrix(1,0,0,1,23.4978,3.17196)">
+                    <g transform="matrix(0.875776,0,0,0.875776,119.757,21.9812)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:none;stroke:rgb(124,124,124);stroke-width:2.97px;stroke-linejoin:miter;"/>
+                    </g>
+                    <g transform="matrix(0.561243,0,0,0.561243,422.981,88.0445)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:rgb(124,124,124);"/>
+                    </g>
+                </g>
+                <g transform="matrix(6.12323e-17,1,-1,6.12323e-17,1172.27,-733.753)">
+                    <g transform="matrix(0.875776,0,0,0.875776,119.757,21.9812)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:none;stroke:rgb(124,124,124);stroke-width:2.97px;stroke-linejoin:miter;"/>
+                    </g>
+                    <g transform="matrix(0.561243,0,0,0.561243,422.981,88.0445)">
+                        <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:rgb(124,124,124);"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.875776,0,0,0.875776,143.255,46.3444)">
+                    <rect x="955.808" y="201.802" width="16.468" height="16.468" style="fill:none;stroke:rgb(124,124,124);stroke-width:2.97px;stroke-linejoin:miter;"/>
+                </g>
+            </g>
+            <g transform="matrix(0.862584,0,0,0.862584,174.544,1953.78)">
+                <path d="M957.19,171.141L957.19,258.058" style="fill:none;stroke:rgb(124,124,124);stroke-width:1.16px;stroke-linejoin:miter;"/>
+            </g>
+        </g>
+    </g>
+</svg>

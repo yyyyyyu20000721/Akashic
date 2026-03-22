@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="icon" type="image/png" href="https://kkkkame0721.github.io/Akashic/icon/icon-192.png">
+<link rel="apple-touch-icon" type="image/png" href="https://kkkkame0721.github.io/Akashic/icon/icon-180.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="
+  width=device-width,
+  initial-scale=1,
+  maximum-scale=1,
+  minimum-scale=1
+">
+<title>未来型半券サービスAkashic</title>
+<link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- ロード画面 -->
+  <div class="load" id="load">
+    <div id="loadImageContainer">
+      <!-- <img src="https://kkkkame0721.github.io/Akashic/img/menu.svg"> -->
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDQyIDM3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTA3NCwtNDkpIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjMzMzMzMywwLDAsMC4zMzMzMzMsMTA2My42NiwwKSI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDMuNTEzOTcsLTEuNTcyMjFlLTIwLC0xLjU4ODIzZS0yMCwzLjU1MDAyLC00NjM5LjM4LC0zNzYuMDk4KSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTM0Ny45NywxNzguMDc2TDEzMjkuODMsMTc4LjA3NkMxMzI5LjY4LDE3OC4wNzYgMTMyOS41MywxNzcuOTk1IDEzMjkuNDUsMTc3Ljg2MkMxMzI5LjM4LDE3Ny43MjkgMTMyOS4zOCwxNzcuNTY1IDEzMjkuNDUsMTc3LjQzMkwxMzQ2LjQsMTQ4LjM3NUMxMzQ2LjQ4LDE0OC4yNDIgMTM0Ni42MiwxNDguMTYgMTM0Ni43OCwxNDguMTZDMTM0Ni45MywxNDguMTYgMTM0Ny4wOCwxNDguMjQyIDEzNDcuMTUsMTQ4LjM3NUwxMzY0LjEsMTc3LjQzMkMxMzY0LjE4LDE3Ny41NjUgMTM2NC4xOCwxNzcuNzI5IDEzNjQuMSwxNzcuODYyQzEzNjQuMDIsMTc3Ljk5NSAxMzYzLjg4LDE3OC4wNzYgMTM2My43MywxNzguMDc2TDEzNTkuMjMsMTc4LjA3NkwxMzUzLjYsMTY4LjQyNEwxMzQ3Ljk3LDE3OC4wNzZaIiBzdHlsZT0iZmlsbDp1cmwoI19MaW5lYXIxKTsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgzNC43NjMxLDEuMzAzNDRlLTEzLC0xLjE0NDg1ZS0xMywyOS45MTY0LDEzMjkuNCwxNzguMDc2KSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMjU1LDEwMCwxNzMpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIwLjUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigyNTUsMTA0LDk0KTtzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDI1NSwxNjAsNjApO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==">
+    </div>
+    <div id="lineContainer">
+      <div id="loadingLine"></div>
+    </div>
+
+  </div>
+  
+  <!-- タイトルバー -->
+  <div class="title-bar" id="titleBar">
+    <img src="https://kkkkame0721.github.io/Akashic/img/menu.svg?ver=1.1" alt="menu" class="menu-icon" onclick=showPage('home') />
+    <h1 class="page-title" id="pageTitle"></h1>
+  </div>
+  
+  <!-- ホームタブ -->
+  <div class="page" id="home" data-tabname="ホーム">
+    <div class="page-content">
+      <div id="homeContainer">
+        <!-- 運営からのお知らせ -->
+        <section class="section notice">
+          <h2 class="section-title">運営からのお知らせ</h2>
+          <ul class="notice-list">
+            <li class="notice-item">
+              <span class="date">2025/11/03</span>
+              <span class="text">システムメンテナンス 2025/12/02(火)</span>
+            </li>
+            <li class="notice-item">
+              <span class="date">2025/11/14</span>
+              <span class="text">年始のアクセス集中により一時的に表示が遅くなる場合があります。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- あなたへのオススメ -->
+        <section class="section recommend">
+          <h2 class="section-title">あなたへのオススメ</h2>
+
+          <!-- #映画・#愛知県 -->
+          <div class="tag-block">
+            <h3 class="tag-title">フォロー中のタグ：<span>#映画</span></h3>
+            <ul class="item-list">
+
+              <li class="item-card">
+                <div class="item-title">「偽者の庭」先行上映会</div>
+                <div class="item-info">
+                  <span class="date">2025/12/12</span>
+                  <span class="place">ダミーシネマ名古屋</span>
+                </div>
+              </li>
+
+              <li class="item-card">
+                <div class="item-title">「嘘」舞台挨拶付き上映</div>
+                <div class="item-info">
+                  <span class="date">2026/01/08</span>
+                  <span class="place">栄404シネマ</span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- #展覧会 -->
+          <div class="tag-block">
+            <h3 class="tag-title">フォロー中のタグ：<span>#展覧会</span></h3>
+            <ul class="item-list">
+
+              <li class="item-card">
+                <div class="item-title">「色と欺瞞」現代美術展</div>
+                <div class="item-info">
+                  <span class="date">2025/12/20</span>
+                  <span class="place">岐阜県虚構美術館</span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- #ライブ -->
+          <div class="tag-block">
+            <h3 class="tag-title">フォロー中のタグ：<span>#ライブ</span></h3>
+            <ul class="item-list">
+
+              <li class="item-card">
+                <div class="item-title">DUMMY NIGHT TOUR 2025 TOKYO</div>
+                <div class="item-info">
+                  <span class="date">2025/12/27</span>
+                  <span class="place">FAKE HALL SHIBUYA</span>
+                </div>
+              </li>
+
+              <li class="item-card">
+                <div class="item-title">嘘フェス 2026冬</div>
+                <div class="item-info">
+                  <span class="date">2026/01/11</span>
+                  <span class="place">愛知国際ダミーホール</span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </section>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ホームタブ下部の固定画像 -->
+  <div class="home-bottom" id="homeBottom">
+    <img src="https://kkkkame0721.github.io/Akashic/img/home_content_bottom_1.svg" id="homeBottomToTicket" />
+    <img src="https://kkkkame0721.github.io/Akashic/img/home_content_bottom_2.svg" />
+  </div>
+  
+  <!-- チケットタブ -->
+  <div class="page" id="ticket" data-tabname="チケット管理">
+    <div class="page-content">
+      <!-- 開催前・開催済みタブ -->
+      <div class="ticket-tabs">
+        <button id="pre-list-btn" class="tab-btn active" data-target="pre-list">開催前チケット</button>
+        <button class="tab-btn" data-target="post-list">開催済みチケット</button>
+      </div>
+
+      <!-- 開催前チケット -->
+      <div id="pre-list" class="ticket-list active">
+        <div class="ticket-card">
+          <div class="ticket-title">DUMMY NIGHT TOUR 2025 NAGOYA</div>
+          <div class="ticket-date">2025/11/14(金)</div>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-title">ダミクエ リリース前特別体験会</div>
+          <div class="ticket-date">2026/01/11(日)</div>
+        </div>
+      </div>
+
+      <!-- 開催済みチケット -->
+      <div id="post-list" class="ticket-list">
+        <div class="ticket-card used">
+          <div class="ticket-title">虚構博覧会「FAKE EXHIBITION 2025」</div>
+          <div class="ticket-date">2025/11/05(水)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- コレクションタブ -->
+  <div class="page" id="collection" data-tabname="コレクション">
+    <div class="page-content">
+      <div class="collection-grid" id="collectionGrid">
+      </div>
+    </div>
+  </div>
+  
+  <!-- 縦動画タブ -->
+  <div class="page" id="scrollArea">
+  </div>
+  <button class="back-btn" id="backBtn">←</button>
+  
+  <!-- チケット詳細パネル -->
+  <div id="ticket-detail-panel">
+    <div class="detail-header">
+      <button id="detail-back-btn">←</button>
+      <span id="detail-title"></span>
+    </div>
+    <!-- 入場アニメーション -->
+    <div class="animationContainer">
+      <video class="ticket-animation" id="ticketAnimation" playsinline muted>
+        <source src="https://kkkkame0721.github.io/Akashic/img/ticket_movie.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- ここに詳細情報が入る -->
+    <div class="detail-body" id="detail-body">
+    </div>
+  </div>
+
+  
+  <!-- 詳細モーダル -->
+  <div class="modal hidden" id="modal">
+    <div id="modal-swipe-handle"></div>
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">詳細ページ</span>
+        <span class="close-btn" id="closeModal">✕</span>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- ① 半券＋本券画像 -->
+        <div class="modal-hero">
+          <img id="modalHeroStubImage" />
+          <img id="modalHeroTicketImage" />
+        </div>
+
+        <!-- ② イベント詳細セクション -->
+        <section class="modal-section" id="eventSection">
+          <h2 class="section-title">イベント詳細</h2>
+
+          <div class="event-content">
+            <img id="eventImage" src="https://placehold.jp/360x120.png">
+            <div class="event-text">
+              <h3 id="eventTitle">タイトル</h3>
+              <p id="eventDate">日付</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ③ 詳細情報セクション -->
+        <section class="modal-section" id="detailSection">
+          <h2 class="section-title">詳細情報</h2>
+
+          <p><strong>場所：</strong><span id="eventLocation">未設定</span></p>
+          <p><strong>撮影日時：</strong><span id="eventRecordedAt">未設定</span></p>
+          <p><strong>メモ：</strong><span id="eventNotes">未設定</span></p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ボトムバー -->
+  <div class="tab-bar" id="tabBar">
+    <div class="tab" data-tab="home">
+      <img src="https://kkkkame0721.github.io/Akashic/icon/home.svg" alt="ホーム">
+      <span>ホーム</span>
+    </div>
+    <div class="tab" data-tab="ticket">
+      <img src="https://kkkkame0721.github.io/Akashic/icon/ticket.svg" alt="チケット">
+      <span>チケット</span>
+    </div>
+    <div class="tab" data-tab="collection">
+      <img src="https://kkkkame0721.github.io/Akashic/icon/collection.svg" alt="コレクション">
+      <span>コレクション</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

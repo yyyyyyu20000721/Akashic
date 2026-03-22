@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ycsj-nagoya",
+    "title": "Yu-Gi-Oh! CHAMPIONSHIP SERIES JAPAN NAGOYA 2025",
+    "video": "https://kkkkame0721.github.io/Akashic/video/ycsj-nagoya.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/ycsj-nagoya-thumbnail.jpg",
+    "date": "2025/11/1(土)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/ycsj-nagoya-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/ycsj-nagoya-ticketimage.jpg"
+  },
+  {
+    "id": "chusonji",
+    "title": "中尊寺金色堂　拝観",
+    "video": "https://kkkkame0721.github.io/Akashic/video/chusonji.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/chusonji-thumbnail.jpg",
+    "date": "2025/9/14(日)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/chusonji-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/chusonji-ticketimage.jpg"
+  },
+  {
+    "id": "sekalive4th",
+    "title": "ProjectSEKAI COLOURFUL LIVE 4th -Unison-",
+    "video": "https://kkkkame0721.github.io/Akashic/video/sekalive4th.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/sekalive4th-thumbnail.jpg",
+    "date": "2025/1/25(土)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/sekalive4th-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/sekalive4th-ticketimage.jpg"
+  },
+  {
+    "id": "c105",
+    "title": "COMIC MARKET 105",
+    "video": "https://kkkkame0721.github.io/Akashic/video/c105.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/c105-thumbnail.jpg",
+    "date": "2024/12/30(月)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/c105-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/c105-ticketimage.jpg"
+  },
+  {
+    "id": "dekaren20th",
+    "title": "特捜戦隊デカレンジャー20th ファイヤーボール・ブースター",
+    "video": "https://kkkkame0721.github.io/Akashic/video/dekaren20th.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/dekaren20th-thumbnail.jpg",
+    "date": "2024/6/7(金)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/dekaren20th-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/dekaren20th-ticketimage.jpg"
+  },
+  {
+    "id": "sekalive3rd",
+    "title": "ProjectSEKAI COLOURFUL LIVE 3rd -Evolve-",
+    "video": "https://kkkkame0721.github.io/Akashic/video/sekalive3rd.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/sekalive3rd-thumbnail.jpg",
+    "date": "2024/1/27(土)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/sekalive3rd-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/sekalive3rd-ticketimage.jpg"
+  },
+  {
+    "id": "hanakutashi",
+    "title": "花腐し　公開記念展示",
+    "video": "https://kkkkame0721.github.io/Akashic/video/hanakutashi.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/hanakutashi-thumbnail.jpg",
+    "date": "2023/11/10(金)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/hanakutashi-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/hanakutashi-ticketimage.jpg"
+  },
+  {
+    "id": "2023m1",
+    "title": "M-1ツアースペシャル2023 愛知公演",
+    "video": "https://kkkkame0721.github.io/Akashic/video/2023m1.mp4",
+    "thumbnail": "https://kkkkame0721.github.io/Akashic/video/2023m1-thumbnail.jpg",
+    "date": "2023/2/16(木)",
+    "eventimage": "https://kkkkame0721.github.io/Akashic/img/2023m1-eventimage.jpg",
+    "ticketimage": "https://kkkkame0721.github.io/Akashic/img/2023m1-ticketimage.jpg"
+  }
+]

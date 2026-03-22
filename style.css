@@ -1,0 +1,600 @@
+:root {
+  --titlebar-height: 60px;
+  --tabbar-height: calc(60px + env(safe-area-inset-bottom));
+  --main-gradation: linear-gradient(to right, #FF54AF, #FF9A0B);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #333333;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+             "Noto Sans JP", "Meiryo", sans-serif;
+}
+
+/* ロード画面 */
+.load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+}
+.load.hidden {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.load #loadImageContainer {
+  width: 20%;
+  aspect-ratio: 1;
+}
+
+.load img {
+}
+#lineContainer {
+  height: 14px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loadingLine {
+  height: 10px;
+  width: 90%;
+  border-radius: 10px;
+  animation: skelton-loading 1.5s ease-in-out infinite;
+}
+@keyframes skelton-loading {
+  0%   { background-color: #FF54AF; transform: scaleX(0.2); }
+  100% { background-color: #FF9A0B; transform: scaleX(1); height: 5px;}
+}
+
+.page {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  opacity: 0;
+}
+/* アクティブなページは中央に */
+.page.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.page.left {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+.page.right {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+.page#ticket {
+  position: relative;
+}
+
+/* ページ内容はタイトルバーの下から始まるように */
+.page-content {
+  box-sizing: border-box;
+  padding-top: var(--titlebar-height);
+  padding-bottom: var(--tabbar-height);
+}
+
+.page-content img{
+  width: 100%;
+}
+
+/* --- ホームタブ関連 --- */
+/* ホーム用コンテナ */
+#homeContainer {
+  padding: 12px;
+  padding-bottom: calc(var(--tabbar-height) + 70px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* セクション共通 */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  background: var(--main-gradation);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 「運営からのお知らせ」 */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: #ccc solid 1px;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.notice-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background: #fcfcfc;
+}
+
+.notice-item .date {
+  font-size: 12px;
+  color: #888;
+}
+
+/* あなたへのオススメ */
+.tag-block {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  border: #ccc solid 1px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.tag-title {
+  font-size: 14px;
+  color: #666;
+}
+.tag-title span {
+  border-bottom: #ccc solid 1px;
+}
+
+/* チケット/展示/ライブ項目 */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+}
+
+.item-card {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.item-info {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+
+/* --- チケットタブ関連 --- */
+.ticket-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 12px;
+  gap: 8px;
+  position: sticky;
+  top: var(--titlebar-height);
+  background: white;
+}
+
+.ticket-tabs .tab-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 160px;
+  text-align: center;
+  background: #f5f5f5;
+  color: #333333;
+  border: none;
+  font-size: 16px;
+}
+
+.ticket-tabs .tab-btn.active {
+  background: var(--main-gradation);
+  color: white;
+}
+
+.ticket-list {
+  display: none;
+  padding: 12px;
+}
+
+.ticket-list.active {
+  display: block;
+}
+
+.ticket-card {
+  background: white;
+  padding: 12px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+/* --- チケット詳細パネル --- */
+#ticket-detail-panel {
+  position: absolute;
+  top: var(--titlebar-height);
+  bottom: var(--tabbar-height);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 50;
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  overflow-y: auto;
+}
+
+/* パネルを表示時 */
+#ticket-detail-panel.active {
+  transform: translateX(0);
+}
+
+/* 上部 */
+.detail-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#detail-back-btn, #stub-back-btn {
+  font-size: 18px;
+  background: transparent;
+  color: #333;
+  border: none;
+}
+
+/* 詳細パネル中部 */
+.detail-body {
+  padding: 0 12px;
+}
+
+/* 入場アニメーション */
+.animationContainer {
+  display: flex;
+  justify-content: center;
+}
+.ticket-animation {
+  height: calc(100dvh - var(--tabbar-height) - var(--titlebar-height));
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: none;
+}
+.ticket-animation.active {
+  display: block;
+}
+
+/* 半券画像 */
+#stub-image {
+  width: 80%;
+  margin-bottom: 16px;
+}
+
+/* ボタン */
+.stub-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  pointer-events: none;
+}
+
+/* 汎用アクションボタン */
+.action-btn {
+  padding: 12px;
+  border-radius: 100px;
+  background: var(--main-gradation);
+  color: white;
+  border: none;
+  font-size: 14px;
+  display: block;
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.action-btn.inactive {
+  background: #D0D0D0;
+  pointer-events: none;
+}
+
+
+/* --- 上部タイトルバー --- */
+.title-bar {
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--titlebar-height);
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 70;
+}
+.title-bar.hidden {
+  display: none;
+}
+
+/* メニューアイコン */
+.menu-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* タイトル文字 */
+.page-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+
+
+/* ホーム画面下部の画像 */
+.home-bottom {
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 850;
+  padding: 0 16px;
+  box-sizing: border-box;
+  transition: opacity 150ms ease;
+}
+.home-bottom img {
+  max-width: 100%;
+  height: auto;
+}
+.home-bottom #homeBottomToTicket {
+  cursor: pointer;
+}
+
+/* 縦画面動画 */
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  background: #2b2e4a;
+}
+
+.card:not(.active) {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+/* 縦動画 */
+.card .card-video {
+  max-width: calc(100% - 6px);
+  margin-bottom: 20px;
+}
+
+/* 動画下部の情報欄 */
+.info {
+  position: absolute;
+  bottom: calc(var(--tabbar-height, 60px) + 16px);
+  left: 16px;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* モーダルの基本構造 */
+.modal {
+  position: fixed;
+  top: 0;
+  right: -96%;
+  width: 100%;
+  height: 94dvh;
+  background: white;
+  color: #333;
+  transition: right 0.4s ease;
+  z-index: 10;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  overflow: hidden;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+}
+/* はみ出してる部分 */
+.modal #modal-swipe-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 100%;
+  cursor: pointer;
+  /* デバッグ中だけ色をつける（完成時は消す） */
+  /*background: rgba(255,0,0,0.2);*/
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal.open {
+  right: 0;
+}
+
+.modal-content {
+  padding-left: 16px;
+  padding-right: 8px;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#eventImage {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-hero {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-hero img {
+  max-height: 180px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.modal-header {
+  padding: 1rem;
+  background: white;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  color: #333;
+  float: right;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* コレクションページ */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 5px;
+  padding: 5px;
+}
+.collection-grid img {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 戻るボタン */
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  z-index: 20;
+  cursor: pointer;
+  display: none;
+}
+
+.back-btn.active {
+  display: block;
+} 
+
+/* --- ボトムタブバー --- */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--tabbar-height);
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: 120;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  font-size: 0.7rem;
+  color: #757575;
+  cursor: pointer;
+  padding-top: 0.2rem;
+}
+
+.tab img {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 2px;
+}
+
+.tab.active {
+  font-weight: bold;
+}
+
+.tab.active span {
+  background: var(--main-gradation);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  touch-action: pan-y; /* ← スマホで横スクロール無効化 */
+}
